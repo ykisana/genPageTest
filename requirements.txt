@@ -1,0 +1,7 @@
+torch>=2.4
+numpy
+pandas
+matplotlib
+tqdm
+pytest
+typesafe-sdk>=0.7

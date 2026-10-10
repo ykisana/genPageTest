@@ -1,0 +1,11 @@
+.venv/
+data/
+checkpoints/
+__pycache__/
+*.pyc
+results/jev_cache/
+.pytest_cache/
+*.pdf
+logs/
+.env
+*_tiny.json

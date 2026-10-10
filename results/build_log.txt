@@ -1,0 +1,5 @@
+48654 impressions | vocab 3798 | mean ctx len 234 | hit rate/slot 0.0931 | pages w/ positive 0.916
+48654 impressions | vocab 3798 | mean ctx len 234 | hit rate/slot 0.0926 | pages w/ positive 0.916
+built 48654 impressions from 6040 users in 102s
+48654 impressions | vocab 3798 | mean ctx len 234 | hit rate/slot 0.0914 | pages w/ positive 0.918
+impressions | vocab 3798 | mean ctx len 234 | hit rate/slot 0.0914 | pages w/ positive 0.918
