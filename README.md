@@ -1,3 +1,17 @@
+**Note**: The following experiments were written by Claude (with human guidance). Pretty much everything below (except this note section, was written by AI).
+
+This repo is just an experiment two mimic and play around with Netflix's GenPage concepts. I wanted to see if I could replicate it, and detects bottlenecks. While look at ways to speed it up.
+
+For speeding it up, I had a few ideas. First, playing around initial one-by-one generation per row, we call this (k). The paper said 'first few entries' so I tried to find optimal first few. I'm assuming Netflix already played around with this, but was interesting to see how results change. 
+
+More interestingly, I wanted to look at **skeleton first**, changing the order of generation. Rather than just going one-by-one, what if we outline the skeleton, then fill the rows based on that. For example, the page may order (comedies, action, trending, for you) in that order. Then fill out each row. Still following the LLM-style fill, with one distiinction **the rows are filled at the same time**. Within each row it's still one-by-one like GenPage. We saw a **3.8% gain in page quality and 1.9x speed compared gainst a GenPage baseline with the same training budget**. Which is HUGE, but of-course at a much smaller scale with different data.
+
+Second I wanted to see how **Decision/System One** models, can speed things up. Such as replacing GenPage, where every slot had questions it would go through before filling. And others like checking with it when it should stop one-by-one generation.
+
+As it explains below, this was done on a much, much smaller scale, so take these results with a grain of salt. 
+
+Results are [here](https://github.com/ykisana/genPageTest/blob/main/results/report.md).
+
 # mini-GenPage: decoding-latency experiments
 
 A small, open reproduction of the serving side of **GenPage** (Wang, Pan, Baltrunas — *GenPage: Towards
